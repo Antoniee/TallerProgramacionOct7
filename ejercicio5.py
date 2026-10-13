@@ -34,7 +34,7 @@ def velocidad_media(desplazamiento_m: float, intervalo_s: float) -> float:
     return desplazamiento_m / intervalo_s
 
 
-#Función construida: 
+#Función construida con apoyo de función vista en clase:
 
 def velocidades(intervalos, *pares, **opciones):
     """Calcula velocidades a partir de intervalos y pares de posiciones, con opción de escala.
