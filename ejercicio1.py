@@ -1,3 +1,6 @@
+""""
+Código original del taller: 
+
 total = 0.0
 cantidad = 0
 while True:
@@ -8,7 +11,7 @@ while True:
     if valor >= 0:
         total += valor
     cantidad += 1
-print(total / cantidad)
+print(total / cantidad)"""
 
 """ Primero: Al realizar la primera indicación del taller obtengo esto: 
 antonia_cardozo@LAPTOP-J24T25G4:~/Programacion/Clases/talleres/tallerOct$ /usr/bin/python3 /home/antonia_cardozo/Programacion/Clases/talleres/tallerOct/ejercicio1.py
@@ -52,7 +55,7 @@ while True:
     if texto == "fin":
         break
     valor = float(texto)
-     try:
+    try:
         valor = float(texto)
     except ValueError:
         print("Error: Ingrese un valor numérico válido.")
@@ -76,4 +79,35 @@ if cantidad > 0:
     print(total / cantidad)
 else:
     print("No se aceptó ninguna medición válida.")
-"""
+
+
+3) Explica por qué cambiar float(texto) por eval(texto) 
+    no es una corrección adecuada para el contrato «recibir una medición numérica»:
+ Cambiar `float(texto)` por `eval(texto)` ya que como vimos en clase es un comando peligroso que puede ejecutar cualquier código, 
+ o código arbitrario, podría leer un script de malware, además de no ser eficiente"""
+
+#código Corregido:
+
+total = 0.0
+cantidad = 0
+while True:
+    texto = input("Medición o fin: ")
+    if texto == "fin":
+        break
+    valor = float(texto)
+    try:
+        valor = float(texto)
+    except ValueError:
+        print("Error: Ingrese un valor numérico válido.")
+        continue
+    if valor >= 0:
+        total += valor
+        cantidad += 1
+    else:
+        print("Error: Ingrese un valor numérico positivo.")
+
+if cantidad > 0:
+        print(total / cantidad)
+else:
+    print("No se aceptó ninguna medición válida.")
+
