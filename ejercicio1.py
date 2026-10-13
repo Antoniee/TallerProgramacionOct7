@@ -94,7 +94,7 @@ while True:
     texto = input("Medición o fin: ")
     if texto == "fin":
         break
-    valor = float(texto)
+    
     try:
         valor = float(texto)
     except ValueError:
