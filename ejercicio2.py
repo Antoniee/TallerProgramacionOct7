@@ -47,6 +47,22 @@ Esto es suficiente porque los elementos de la lista son números, que son inmuta
 3) Si datos fuera la tupla (2, 4), señala la primera operación que fallaría. Propón un cambio en la creación de copia
  que permita recibir lista o tupla conservando el resto de la función.
 
- a) La primera parte del código que fallaría sería la línea copia[0] = copia[0] + 1, ya que las tuplas son inmutables y no se puede modificar un elemento de una tupla.
+ a) La primera parte del código que fallaría sería:
+ la línea copia = valores.copy() ya que las tuplas  no tienen dicho atributo. 
  
+ b) Para permitir recibir lista o tupla, se puede cambiar la creación de copia a:
+
+ copia = list(valores)
+    
+
+ así, si recibe una tupla (2, 4), el constructor la transforma en una lista mutable [2, 4], 
+    permitiendo que el resto de la función se peuda ejecutar. 
+
  """
+
+#Código Corregido:
+def registrar(valores, registro):
+    copia = list(valores)
+    copia[0] = copia[0] + 1
+    registro["ultima"] = copia.copy()
+    return copia    
