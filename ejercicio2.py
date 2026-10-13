@@ -1,4 +1,7 @@
-"""Código original del taller:
+"""
+2. Colecciones, alias y estado de una función
+
+Código original del taller:
 def registrar(valores, registro):
     copia = valores.copy()
     copia[0] = copia[0] + 1

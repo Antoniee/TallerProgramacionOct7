@@ -1,4 +1,6 @@
-"""código original del taller:
+"""
+3. Primalidad, break y for…else
+código original del taller:
 def es_primo(n):
     for divisor in range(2, n):
         if n % divisor == 0:

@@ -1,4 +1,7 @@
 """"
+
+1. Entrada, conversión y control de un ciclo
+
 Código original del taller: 
 
 total = 0.0
